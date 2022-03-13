@@ -99,13 +99,14 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hallo [👋](https://telegra.ph/file/7482398e772bd21a1f2bb.jpg) {},
-Im Powerfull Management Bot And I Will Help In Managing Your Group.
-┏━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┓
-× *Server Uptime:* `{}`
-× `{}` *users, across* `{}` *chats.*
-× *Maintained by:* [Zenitsu Prjkt](https://t.me/ZenitsuPrjkt)
-┗━━━━━━━━•❃°•°❀°•°❃•━━━━━━━━┛
+Hai [👋](https://telegra.ph/file/7482398e772bd21a1f2bb.jpg) {},
+I am a group management bot, here to help you get around and keep the order in your groups!
+I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
+
+Helpful commands:
+ - /start: Starts me! You've probably already used this!
+ - /help: Sends this message; I'll tell you more about myself!
+ - /donate: Gives you info on how to support me and my creator.
 """
 
 buttons = [
@@ -130,8 +131,8 @@ Click on the button bellow to get description about specifics command."""
 ELAINA_IMG = "https://telegra.ph/file/69f0dec8ffffa63b92f3d.jpg"
 
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @ZenitsuPrjkt \
- Supporting isnt always financial! \
+ You can support the project by contacting @ZenitsuPrjkt
+ Supporting isnt always financial!
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
