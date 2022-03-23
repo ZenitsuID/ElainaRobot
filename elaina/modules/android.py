@@ -629,6 +629,7 @@ def bootleg(update: Update, context: CallbackContext) -> str:
         return
 
 
+__mod_name__ = "Android"
 __help__ = """
 Get the latest Magsik releases or TWRP for your device!
 
@@ -643,9 +644,42 @@ Get the latest Magsik releases or TWRP for your device!
 *Samsung:*
 × /checkfw <model> <csc> - Samsung only - shows the latest firmware info for the given device, taken from samsung servers
 × /getfw <model> <csc> - Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device
-"""
 
-__mod_name__ = "Android"
+__helpbtns__ = (
+        [[
+            InlineKeyboardButton
+                (
+                    "Anti-Channel", callback_data="_anc"
+                ),            
+            InlineKeyboardButton
+                (
+                    "Anti-language", callback_data="_anl"
+                )
+        ],
+        [
+            InlineKeyboardButton
+                (
+                    "Anti-porn", callback_data="_anp"
+                ),  
+            InlineKeyboardButton
+                (
+                    "Anti-spam", callback_data="_ans"
+                )
+        ],
+        [       
+            InlineKeyboardButton           
+                (
+                    "Anti-spoiler", callback_data="_anss"
+                ),
+            InlineKeyboardButton
+                (
+                    "Anti-service", callback_data="_anssx"
+                )    
+        ],
+        [
+            InlineKeyboardButton('Anti-Flood', callback_data='_fld')
+        ]]
+)
 
 MAGISK_HANDLER = DisableAbleCommandHandler("magisk", magisk, run_async=True)
 HAVOC_HANDLER = DisableAbleCommandHandler("havoc", havoc, run_async=True)
