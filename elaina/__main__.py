@@ -117,7 +117,9 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="🤖 About", callback_data="elaina_"),
-        InlineKeyboardButton(text="⚙️ ️Source Code", url="https://github.com/Zenitsu-ID/ElainaRobot"),
+        InlineKeyboardButton(
+            text="⚙️ ️Source Code", url="https://github.com/Zenitsu-ID/ElainaRobot"
+        ),
     ],
     [
         InlineKeyboardButton(text="❔ Help", callback_data="help_back"),
