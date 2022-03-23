@@ -646,13 +646,13 @@ Get the latest Magsik releases or TWRP for your device!
 × /getfw <model> <csc> - Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device"""
 __buttons__ = [
     [
-        InlineKeyboardButton(
-            text="zzzzz", url="t.me/ElainaPrjktRobot?startgroup=new"
-        ),
+        InlineKeyboardButton(text="zzzzz", url="t.me/ElainaPrjktRobot?startgroup=new"),
     ],
     [
         InlineKeyboardButton(text="🤖 zzx", callback_data="elaina_"),
-        InlineKeyboardButton(text="⚙️ ️zss Code", url="https://github.com/Zenitsu-ID/ElainaRobot"),
+        InlineKeyboardButton(
+            text="⚙️ ️zss Code", url="https://github.com/Zenitsu-ID/ElainaRobot"
+        ),
     ],
     [
         InlineKeyboardButton(text="❔ zszx", callback_data="help_back"),
