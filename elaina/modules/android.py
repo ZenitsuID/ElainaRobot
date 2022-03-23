@@ -644,20 +644,19 @@ Get the latest Magsik releases or TWRP for your device!
 *Samsung:*
 × /checkfw <model> <csc> - Samsung only - shows the latest firmware info for the given device, taken from samsung servers
 × /getfw <model> <csc> - Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device"""
-__helpbtns__ = [
+__buttons__ = [
     [
-        InlineKeyboardButton("Anti-Channel", callback_data="_anc"),
-        InlineKeyboardButton("Anti-language", callback_data="_anl"),
+        InlineKeyboardButton(
+            text="zzzzz", url="t.me/ElainaPrjktRobot?startgroup=new"
+        ),
     ],
     [
-        InlineKeyboardButton("Anti-porn", callback_data="_anp"),
-        InlineKeyboardButton("Anti-spam", callback_data="_ans"),
+        InlineKeyboardButton(text="🤖 zzx", callback_data="elaina_"),
+        InlineKeyboardButton(text="⚙️ ️zss Code", url="https://github.com/Zenitsu-ID/ElainaRobot"),
     ],
     [
-        InlineKeyboardButton("Anti-spoiler", callback_data="_anss"),
-        InlineKeyboardButton("Anti-service", callback_data="_anssx"),
+        InlineKeyboardButton(text="❔ zszx", callback_data="help_back"),
     ],
-    [InlineKeyboardButton("Anti-Flood", callback_data="_fld")],
 ]
 
 
