@@ -404,10 +404,6 @@ def elaina_about_callback(update, context):
                         InlineKeyboardButton(
                             text="Credits", callback_data="elaina_credit"
                         ),
-                        InlineKeyboardButton(
-                            text="Source Code",
-                            url="https://github.com/ZenitsuPrjkt/ElainaRobot",
-                        ),
                     ],
                     [
                         InlineKeyboardButton(text="Back", callback_data="elaina_back"),
