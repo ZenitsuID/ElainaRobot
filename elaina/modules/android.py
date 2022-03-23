@@ -643,22 +643,8 @@ Get the latest Magsik releases or TWRP for your device!
 
 *Samsung:*
 × /checkfw <model> <csc> - Samsung only - shows the latest firmware info for the given device, taken from samsung servers
-× /getfw <model> <csc> - Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device"""
-__buttons__ = [
-    [
-        InlineKeyboardButton(text="zzzzz", url="t.me/ElainaPrjktRobot?startgroup=new"),
-    ],
-    [
-        InlineKeyboardButton(text="🤖 zzx", callback_data="elaina_"),
-        InlineKeyboardButton(
-            text="⚙️ ️zss Code", url="https://github.com/Zenitsu-ID/ElainaRobot"
-        ),
-    ],
-    [
-        InlineKeyboardButton(text="❔ zszx", callback_data="help_back"),
-    ],
-]
-
+× /getfw <model> <csc> - Samsung only - gets firmware download links from samfrew, sammobile and sfirmwares for the given device
+"""
 
 MAGISK_HANDLER = DisableAbleCommandHandler("magisk", magisk, run_async=True)
 HAVOC_HANDLER = DisableAbleCommandHandler("havoc", havoc, run_async=True)
