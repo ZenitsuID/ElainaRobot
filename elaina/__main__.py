@@ -99,7 +99,7 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = """
-Hai [👋](https://telegra.ph/file/7482398e772bd21a1f2bb.jpg) {},
+Hai {},
 I am a group management bot, here to help you get around and keep the order in your groups!
 I have lots of handy features, such as flood control, a warning system, a note keeping system, and even predetermined replies on certain keywords.
 
