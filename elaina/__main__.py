@@ -117,7 +117,7 @@ buttons = [
     ],
     [
         InlineKeyboardButton(text="🤖 About", callback_data="elaina_"),
-        InlineKeyboardButton(text="🛡 ️Federation", url="https://t.me/WolfOsFederation"),
+        InlineKeyboardButton(text="⚙️ ️Source Code", url="https://github.com/Zenitsu-ID/ElainaRobot"),
     ],
     [
         InlineKeyboardButton(text="❔ Help", callback_data="help_back"),
@@ -128,11 +128,9 @@ buttons = [
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
 
-ELAINA_IMG = "https://telegra.ph/file/69f0dec8ffffa63b92f3d.jpg"
-
 DONATE_STRING = """Heya, glad to hear you want to donate!
- You can support the project by contacting @ZenitsuPrjkt
- Supporting isnt always financial!
+ You can support the project by contacting @ZenitsuXD \
+ Supporting isnt always financial! \
  Those who cannot provide monetary support are welcome to help us develop the bot at ."""
 
 IMPORTED = {}
