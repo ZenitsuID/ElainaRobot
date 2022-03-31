@@ -1,12 +1,17 @@
 import html
 
-from telegram.ext.filters import Filters
-from telegram import Update, message, ParseMode
+from telegram import Update
 from telegram.ext import CallbackContext
+from telegram.ext.filters import Filters
 
+from elaina.modules.helper_funcs.channel_mode import AdminPerms, user_admin
 from elaina.modules.helper_funcs.decorators import elainacmd, elainamsg
-from elaina.modules.helper_funcs.channel_mode import user_admin, AdminPerms
-from elaina.modules.sql.antichannel_sql import antichannel_status, disable_antichannel, enable_antichannel
+from elaina.modules.sql.antichannel_sql import (
+    antichannel_status,
+    disable_antichannel,
+    enable_antichannel,
+)
+
 
 @elainacmd(command="antichannelmode", group=100)
 @user_admin(AdminPerms.CAN_RESTRICT_MEMBERS)
@@ -18,15 +23,23 @@ def set_antichannel(update: Update, context: CallbackContext):
         s = args[0].lower()
         if s in ["yes", "on"]:
             enable_antichannel(chat.id)
-            message.reply_html(text=gs(chat.id, "active_antichannel").format(html.escape(chat.title)))
+            message.reply_html(
+                text=gs(chat.id, "active_antichannel").format(html.escape(chat.title))
+            )
         elif s in ["off", "no"]:
             disable_antichannel(chat.id)
-            message.reply_html(text=gs(chat.id, "disable_antichannel").format(html.escape(chat.title)))
+            message.reply_html(
+                text=gs(chat.id, "disable_antichannel").format(html.escape(chat.title))
+            )
         else:
             message.reply_text(text=gs(chat.id, "invalid_antichannel").format(s))
         return
     message.reply_html(
-        text=gs(chat.id, "status_antichannel").format(antichannel_status(chat.id), html.escape(chat.title)))
+        text=gs(chat.id, "status_antichannel").format(
+            antichannel_status(chat.id), html.escape(chat.title)
+        )
+    )
+
 
 @elainamsg(Filters.chat_type.groups, group=110)
 def eliminate_channel(update: Update, context: CallbackContext):
@@ -35,12 +48,18 @@ def eliminate_channel(update: Update, context: CallbackContext):
     bot = context.bot
     if not antichannel_status(chat.id):
         return
-    if message.sender_chat and message.sender_chat.type == "channel" and not message.is_automatic_forward:
+    if (
+        message.sender_chat
+        and message.sender_chat.type == "channel"
+        and not message.is_automatic_forward
+    ):
         message.delete()
         sender_chat = message.sender_chat
         bot.ban_chat_sender_chat(sender_chat_id=sender_chat.id, chat_id=chat.id)
-        
+
+
 def helps(chat):
     return gs(chat, "antichannel_help")
+
 
 __mod_name__ = "Anti-Channel"

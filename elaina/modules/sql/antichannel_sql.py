@@ -1,15 +1,14 @@
 import threading
 
-from sqlalchemy import Boolean
+from sqlalchemy import Boolean, Column
 from sqlalchemy.sql.sqltypes import String
-from sqlalchemy import Column
 
 from elaina.modules.sql import BASE, SESSION
 
 
 class AntiChannelSettings(BASE):
     __tablename__ = "anti_channel_settings"
-    
+
     chat_id = Column(String(14), primary_key=True)
     setting = Column(Boolean, default=False, nullable=False)
 
@@ -23,6 +22,7 @@ class AntiChannelSettings(BASE):
 
 AntiChannelSettings.__table__.create(checkfirst=True)
 ANTICHANNEL_SETTING_LOCK = threading.RLock()
+
 
 def enable_antichannel(chat_id: int):
     with ANTICHANNEL_SETTING_LOCK:
@@ -52,8 +52,6 @@ def antichannel_status(chat_id: int) -> bool:
         if not d:
             return False
         return d.setting
-
-
 
 
 def migrate_chat(old_chat_id, new_chat_id):
